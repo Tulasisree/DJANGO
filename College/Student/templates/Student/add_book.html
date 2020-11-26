@@ -1,0 +1,9 @@
+{% extends 'Student/base.html' %}
+{% block title %}addBook{% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'edit_book' %}" style='margin-left:200px'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="">
+</form>
+{% endblock %}

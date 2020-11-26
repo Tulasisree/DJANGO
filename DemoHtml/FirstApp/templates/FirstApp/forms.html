@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>forms example</h1>
+        <form action="{% url 'forms' %}" method="POST">
+             {% csrf_token %}
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <br><br>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter email">
+        <br><br>
+        <label>File</label>
+        <input type="file" name="file" placeholder="upload file">
+        <br><br>
+        <label>enter your DOB</label>
+        <input type="date" name="dob" placeholder="enter DOB">
+        <br><br>
+        <label>Select your Branch</label>
+        <select name="branch">
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+        </select>
+        <br><br>
+        <label>Select your gender</label>
+        <input type="radio" name="gender" value="female">Female</input>
+        <input type="radio" name="gender" value="male">Male</input>
+        <br><br>
+        <input type="submit" name="submit" value="Register"></button>
+
+        </form>
+    </body>
+</html>

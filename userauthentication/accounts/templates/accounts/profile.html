@@ -1,0 +1,41 @@
+{% extends 'accounts/base.html'%}
+
+{% block content%}
+
+<div class="container card card-body bg-info">
+    <h1 class="text-center text-danger">View Profile</h1>
+    <table class="table table-bordered table-hover table-striped" style="background: #5dea47">
+        <tr>
+            <th>Image</th>
+            <td>
+                    <img style="width:100px; height:100px;border-radius: 50%" src="{{pro.image.url}}">
+            </td>
+        </tr>
+        <tr>
+            <th>FullName</th>
+            <td>
+                {{user.first_name}} {{user.last_name}}
+            </td>
+        </tr>
+        <tr>
+            <th>UserName</th>
+            <td>{{user.username}}</td>
+        </tr>
+        <tr>
+                <th>Email</th>
+                <td>{{user.email}}</td>
+        </tr>
+        <tr>
+                <th>DOB</th>
+                <td>{{pro.dob}}</td>
+        </tr>
+        <tr>
+                <th>Mobile No:</th>
+                <td>{{pro.mobileno}}</td>
+        </tr>
+    </table>
+    <div class="text-center">
+        <a href="{% url 'updateprofile' %}" class="btn btn-outline-danger btn-lg">Edit Profile</a>
+    </div>
+</div>
+{% endblock %}
